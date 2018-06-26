@@ -67,10 +67,12 @@ const setStatus = () => {
 
 // attest User
 const attest = () => {
-  var PROPERTY_VALUE = 'Lorem ipsum dolor sit amet';
+  let PROPERTY_VALUE = 'Lorem ipsum dolor sit amet',
+    CLIENT_ID = '2on6y285bcCdwFtuYipqoLTN2d95YrhW2Cc';
+
   console.log(connect);
   connect.attestCredentials({
-    sub: connect.clientId,
-    claim: { 'claim': PROPERTY_VALUE },
+    sub: globalState.uportId,
+    claim: { 'claim': PROPERTY_VALUE }
   });
 }
